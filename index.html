@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Professional software development & consulting" />
+  <meta name="keywords" content="Software, Consulting, Development, IT Solutions" />
+  <meta name="author" content="KINtech" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KINtech - Innovative Software & Consulting Services</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+
+  <!-- Bootstrap Icons (Optional) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* Example brand color (dark bluish). Adjust as needed */
+    :root {
+      --brand-color: #4361ee;
+      --brand-color-dark: #3a49bb;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      /* Temporary placeholder for hero background */
+      background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+        url("https://via.placeholder.com/1920x1080?text=Hero+Background") 
+          center/cover 
+          no-repeat;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+
+    /* Services Icons */
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--brand-color);
+      transition: color 0.3s;
+    }
+    .service-box:hover .service-icon {
+      color: var(--brand-color-dark);
+    }
+
+    /* Portfolio Hover Effect */
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .portfolio-item img {
+      transition: transform 0.4s ease;
+    }
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Testimonials */
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--brand-color);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background-color: var(--brand-color);
+      color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .cta-section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: #f8f9fa;
+      color: #666;
+    }
+    .footer a {
+      text-decoration: none;
+      color: #666;
+    }
+    .footer a:hover {
+      color: var(--brand-color-dark);
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 sticky-top">
+        <div class="container">
+          <a class="navbar-brand fw-bold text-primary" href="#">
+            <i class="bi bi-code-slash"></i> KINtech
+          </a>
+          <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div 
+            class="collapse navbar-collapse justify-content-end" 
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#hero">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonials">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+  
+
+<!-- Hero Section -->
+<!-- <section class="hero" id="hero">
+  <div class="container">
+    <h1 class="mb-4">We Build Solutions for Your Business</h1>
+    <p class="lead mb-4">
+      Transform your ideas into high-quality, innovative software products.
+      We offer development & consulting to move your business forward.
+    </p>
+    <a href="#services" class="btn btn-lg btn-primary px-4">Explore Services</a>
+  </div>
+</section> -->
+
+
+<section id="hero" class="hero-carousel">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div 
+          class="carousel-item active"
+          style="
+            background: 
+              linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+              url('https://via.placeholder.com/1920x1080?text=Custom+Development') 
+              center/cover 
+              no-repeat;
+          "
+        >
+          <div class="carousel-caption">
+            <h1>Custom Development</h1>
+            <p class="lead">
+              Tailored web, mobile, and desktop solutions built to your exact needs.
+            </p>
+            <a href="#services" class="btn btn-lg btn-primary px-4">Learn More</a>
+          </div>
+        </div>
+  
+        <!-- Slide 2 -->
+        <div 
+          class="carousel-item"
+          style="
+            background: 
+              linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+              url('https://via.placeholder.com/1920x1080?text=Consulting+%26+Advisory') 
+              center/cover 
+              no-repeat;
+          "
+        >
+          <div class="carousel-caption">
+            <h1>Consulting & Advisory</h1>
+            <p class="lead">
+              Expert guidance on strategy, architecture, and best practices.
+            </p>
+            <a href="#services" class="btn btn-lg btn-primary px-4">Learn More</a>
+          </div>
+        </div>
+  
+        <!-- Slide 3 -->
+        <div 
+          class="carousel-item"
+          style="
+            background: 
+              linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+              url('https://via.placeholder.com/1920x1080?text=Maintenance+%26+Support') 
+              center/cover 
+              no-repeat;
+          "
+        >
+          <div class="carousel-caption">
+            <h1>Maintenance & Support</h1>
+            <p class="lead">
+              Keep your software running smoothly with our reliable support services.
+            </p>
+            <a href="#services" class="btn btn-lg btn-primary px-4">Learn More</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Carousel Controls -->
+      <button 
+        class="carousel-control-prev" 
+        type="button" 
+        data-bs-target="#heroCarousel" 
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button 
+        class="carousel-control-next" 
+        type="button" 
+        data-bs-target="#heroCarousel" 
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  
+  
+
+<!-- About Section -->
+<section class="py-5" id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Column: Image (50% width on md screens) -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img
+            src="css/img/new_about.png"
+            class="img-fluid w-100 rounded shadow"
+            alt="About KINtech"
+          />
+        </div>
+  
+        <!-- Right Column: Text (50% width on md screens) -->
+        <div class="col-md-6">
+          <h2 class="fw-bold">About Our Company</h2>
+          <p class="mt-3 text-muted">
+            KINtech is a team of passionate developers and consultants
+            dedicated to providing top-notch software solutions. Since our
+            founding in 20XX, we’ve collaborated with clients across diverse
+            industries to bring their visions to life.
+          </p>
+          <p class="text-muted">
+            We believe in innovation, agility, and clear communication.
+            Our goal is to empower businesses with tailored technology
+            that drives long-term success.
+          </p>
+          <a href="#contact" class="btn btn-outline-primary mt-3">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+<!-- Services Section -->
+<section class="py-5 bg-light" id="services">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Services</h2>
+      <p class="text-muted">We cover a broad range of software needs</p>
+    </div>
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="text-center p-4 bg-white shadow-sm service-box">
+          <i class="bi bi-laptop service-icon"></i>
+          <h5 class="fw-bold">Custom Development</h5>
+          <p class="text-muted">
+            Web, mobile, and desktop solutions built to your specifications 
+            using modern technologies and best practices.
+          </p>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="text-center p-4 bg-white shadow-sm service-box">
+          <i class="bi bi-people service-icon"></i>
+          <h5 class="fw-bold">Consulting & Advisory</h5>
+          <p class="text-muted">
+            Expert guidance on architecture, code reviews, and strategy to 
+            ensure your projects stay on track and deliver real value.
+          </p>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="text-center p-4 bg-white shadow-sm service-box">
+          <i class="bi bi-arrow-repeat service-icon"></i>
+          <h5 class="fw-bold">Maintenance & Support</h5>
+          <p class="text-muted">
+            Ongoing care to keep your software stable, secure, and optimized for 
+            peak performance in a rapidly evolving tech landscape.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio / Projects Section -->
+<section class="py-5" id="portfolio">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Portfolio</h2>
+      <p class="text-muted">A glimpse at some recent successes</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Portfolio item 1 -->
+      <div class="col">
+        <div class="portfolio-item">
+          <!-- Temporary placeholder image for Project 1 -->
+          <img 
+  src="https://placehold.co/600x400?text=Project+1" 
+  alt="Project 1" class="img-fluid"
+/>
+
+
+        </div>
+      </div>
+      <!-- Portfolio item 2 -->
+      <div class="col">
+        <div class="portfolio-item">
+          <!-- Temporary placeholder image for Project 2 -->
+          <img 
+  src="https://placehold.co/600x400?text=Project+2" 
+  alt="Project 2" class="img-fluid"
+/>
+        </div>
+      </div>
+      <!-- Portfolio item 3 -->
+      <div class="col">
+        <div class="portfolio-item">
+          <!-- Temporary placeholder image for Project 3 -->
+          <img 
+  src="https://placehold.co/600x400?text=Project+3" 
+  alt="Project 3" class="img-fluid"
+/>
+        </div>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Carousel -->
+<!-- <section class="py-5 bg-light" id="testimonials">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">What Our Clients Say</h2>
+    
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel"> -->
+      <!-- Carousel indicators (optional) -->
+      <!-- <div class="carousel-indicators">
+        <button 
+          type="button" 
+          data-bs-target="#testimonialCarousel" 
+          data-bs-slide-to="0" 
+          class="active"
+          aria-current="true" 
+          aria-label="Slide 1"
+        ></button>
+        <button 
+          type="button" 
+          data-bs-target="#testimonialCarousel" 
+          data-bs-slide-to="1" 
+          aria-label="Slide 2"
+        ></button>
+        <button 
+          type="button" 
+          data-bs-target="#testimonialCarousel" 
+          data-bs-slide-to="2" 
+          aria-label="Slide 3"
+        ></button>
+      </div> -->
+
+      <!-- <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+          <blockquote class="blockquote">
+            <p class="fs-5">
+              “KINtech delivered on time and exceeded our expectations.
+               Our new system is both stable and scalable.”
+            </p>
+            <footer class="blockquote-footer">
+              <span class="testimonial-author">John Smith</span>, CEO at TechCorp
+            </footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item text-center">
+          <blockquote class="blockquote">
+            <p class="fs-5">
+              “The consulting team helped us streamline our processes
+               and saved us countless hours. Highly recommended!”
+            </p>
+            <footer class="blockquote-footer">
+              <span class="testimonial-author">Sarah Johnson</span>, COO at FinServe
+            </footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item text-center">
+          <blockquote class="blockquote">
+            <p class="fs-5">
+              “Professional, responsive, and technically adept. 
+               We’ll definitely be partnering with them again.”
+            </p>
+            <footer class="blockquote-footer">
+              <span class="testimonial-author">Maria Lopez</span>, Founder at Startup.io
+            </footer>
+          </blockquote>
+        </div>
+      </div> -->
+
+      <!-- Carousel controls (optional) -->
+      <!-- <button 
+        class="carousel-control-prev" 
+        type="button" 
+        data-bs-target="#testimonialCarousel" 
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button 
+        class="carousel-control-next" 
+        type="button" 
+        data-bs-target="#testimonialCarousel" 
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section> -->
+
+<!-- Call-to-action Section -->
+<section class="cta-section">
+  <div class="container">
+    <h3 class="fw-bold">Ready to Accelerate Your Business?</h3>
+    <p>
+      Get in touch with our team of experts to explore tailored solutions
+      that fit your needs.
+    </p>
+    <a href="#contact" class="btn btn-light btn-lg mt-3">Contact Us</a>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5" id="contact">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Contact Us</h2>
+      <p class="text-muted">We’d love to hear from you</p>
+    </div>
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label fw-bold">Message</label>
+            <textarea 
+              class="form-control" 
+              id="message" 
+              rows="5" 
+              placeholder="How can we help you?" 
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary px-4">Submit</button>
+        </form>
+      </div>
+      <!-- Contact Info -->
+      <div class="col-md-6">
+        <h4 class="fw-bold">Address & Info</h4>
+        <p class="text-muted">
+          1234 Software Ave<br/>
+          Kigali City, Rwanda
+        </p>
+        <p><strong>Email:</strong> kintechsolutions3@gmail.com</p>
+        <p><strong>Phone:</strong> +250 780 673 533</p>
+        <p><strong>Business Hours:</strong> Mon-Fri, 9am-6pm</p>
+        <!-- Optional: Map or Social Media Links -->
+        <div class="mt-4">
+          <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-3">
+  <div class="container text-center">
+    <small class="d-block mb-2">
+      &copy; 2025 KINtech. All rights reserved.
+    </small>
+    <small>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </small>
+  </div>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+></script>
+</body>
+</html>
